@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Using Google Maps API</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js">
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOeVGy7yU7ODUMzLuhikXehq50L4F76ds"></script>
+</head>
+
+<body>
+	<h1>Using a public data set, we are creating a map with markers</h1>
+	<div id="map"></div>
+</body>
+
+<script type="text/javascript">
+	$(window).load(function(){
+		url = 'https://data.cityofnewyork.us/resource/9w7m-hzhe.json';
+		var center = new google.maps.LatLng(40.7128,74.0060);
+		var mapOptions ={
+			zoom: 8,
+			center: center
+		}
+		var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+	})
+</script>
+</html>
+
